@@ -4,7 +4,7 @@
 
 export const techOptions = async () => {
 
-const response = await fetch("http://localhost:8088/techs")
+const response = await fetch("http://localhost:5094/technology")
 
     const allTechOptions = await response.json()
    

@@ -7,9 +7,10 @@ const transientState = {
    
 
 }
+
 // Functions to modify each property of paint transient state
 export const setPaint= (chosenPaint) => {
-    transientState.paintColorId = chosenPaint
+    transientState.paintId = chosenPaint
     console.log(transientState)
 }
 
@@ -21,7 +22,7 @@ export const setInterior = (chosenInterior) => {
 
 // Functions to modify each property of tech transient state
 export const setTech = (chosenTech) => {
-    transientState.techId = chosenTech
+    transientState.technologyId = chosenTech
     console.log(transientState)
 }
 
@@ -47,11 +48,17 @@ export const permanentState = async () => {
 
 
     }
+
+    
     
 
     // Send the transient state to your API
-    const response = await fetch("http://localhost:8088/Orders", postOptions)
+    const response = await fetch("http://localhost:5094/orders", postOptions)
     const customEvent = new CustomEvent("orderSubmitted")
     document.dispatchEvent(customEvent)
 
+    
+
 }
+
+

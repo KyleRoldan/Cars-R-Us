@@ -24,7 +24,7 @@ const changeHandler = (changeEvent) => {
 
 export const paintOptions = async () => {
 
-    const response = await fetch("http://localhost:8088/paintColors") 
+    const response = await fetch("http://localhost:5094/paintColors") 
 
     const allPaintOptions = await response.json()
     document.addEventListener("change", changeHandler )

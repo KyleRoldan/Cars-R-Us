@@ -1,13 +1,6 @@
+    export const wheelOptions = async () => {
 
-
-
-
-
-
-
-export const wheelOptions = async () => {
-
-    const response = await fetch("http://localhost:8088/wheels") 
+    const response = await fetch("http://localhost:5094/wheels") 
 
     const allWheelOptions = await response.json()
     //document.addEventListener("change", handleSizeChoice)//
@@ -16,7 +9,7 @@ export const wheelOptions = async () => {
                     
     <select id="resource4">
     <option value="0">Prompt to select resource...</option>
-    ${allWheelOptions.map(wheel => `<option value="${wheel.id}">${wheel.wheels}</option>`).join('')}
+    ${allWheelOptions.map(wheel => `<option value="${wheel.id}">${wheel.style}</option>`).join('')}
     
      </select>
 </div>`

@@ -6,7 +6,7 @@
 
 export const interiorOptions = async () => {
 
-    const response = await fetch("http://localhost:8088/interiors") 
+    const response = await fetch("http://localhost:5094/interiors") 
 
     const allInteriorOptions = await response.json()
     
@@ -14,7 +14,7 @@ export const interiorOptions = async () => {
                     
     <select id="resource3">
     <option value="0">Prompt to select resource...</option>
-    ${allInteriorOptions.map(interior => `<option value="${interior.id}">${interior.fabric}</option>`).join('')}
+    ${allInteriorOptions.map(interior => `<option value="${interior.id}">${interior.material}</option>`).join('')}
     
     </select>
 
